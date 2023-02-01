@@ -5,13 +5,19 @@ a = int(input('Введите число: '))
 
 # 0 1 1 2 3 5 8 13 
 
-count = 4
-fib = 2
-temp = 1
+n0 = 0
+n1 = 0 # значение последовательности
+n2 = 1 # элемент по счету
+i = 2
 
-while True:
-    if a == fib:
-        break
-    
-
-print(f'Позиция числа равна {count}')
+while n0 < a:
+    n0 = n1 + n2
+    n1 = n2
+    n2 = n0
+    i += 1
+    if n0 > a:
+        i = 0
+if i != 0:
+    print(i)
+else:
+    print(-1)
