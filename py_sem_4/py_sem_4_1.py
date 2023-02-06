@@ -3,7 +3,7 @@
 # Количество повторов добавляется к символам с помощью постфикса формата _n.
 
 # Input: a a a b c a a d c d d
-# Output: a_1 a_2 a_3 b_1 c_1 a_4 a_5 d_1 c_2 d_2 d_3
+# Output: a_0 a_1 a_2 b_0 c_0 a_3 a_4 d_0 c_1 d_1 d_2 
 
 str_0 = input().split()
 result = {}
