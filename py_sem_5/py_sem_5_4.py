@@ -7,7 +7,6 @@
 # (даже для ввода и вывода).
 # Input: 2 -> 3 4
 # Output: 4 3
-import random
 
 def change(x):
     if x == 0: return ''
