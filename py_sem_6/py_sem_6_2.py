@@ -20,9 +20,8 @@ import random
 str1 = [random.randint(1, 10) for i in range(int(input('Введите число: ')))]
 
 c = 0
-for i in range(1, len(str1) - 1):
+for i in range(len(str1)):
     if str1[i] > str1[i - 1] and str1[i] > str1[i + 1]: c += 1
-if str1[-1] > str1[0] and str1[-1] > str1[-2]: c += 1
-if str1[0] > str1[-1] and str1[0] > str1[1]: c += 1
+
 print(str1)
 print(c)
