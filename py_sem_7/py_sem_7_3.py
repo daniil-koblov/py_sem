@@ -20,6 +20,9 @@ if same_by(lambda x: x % 2, values):
 else:
     print('different')
 
+
+
+
 # def find_farthest_orbit(list_of_orbits):
 # 	list_of_elliptical_orbits = [i for i in list_of_orbits if i[0] != i[1]]
 # 	list_of_areas = [(i[0] * i[1]) for i in list_of_elliptical_orbits]
