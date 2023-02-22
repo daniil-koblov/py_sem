@@ -13,36 +13,41 @@
 # data.close()
 
 
-def see():
-    data = open('file.txt', 'r', encoding = 'utf-8')
-    for i in data:
-        print(i)
+def add():
+    with open('file.txt', 'a') as data:
+        surname = data.write(input('Введите фамилия: '))
+        data.write(' ')
+        name = data.write(input('Введите имя: '))
+        data.write(' ')
+        secondname = data.write(input('Введите отчество: '))
+        data.write(' ')
+        phonenumber = data.write(input('Введите номер телефона: '))
+        data.write('\n')
+    
+def output():
+    path = 'file.txt'
+    data = open('file.txt', 'r')
+    for line in data:
+        print(line)
     data.close()
 
-# see()
+def search(info):
+    path = 'file.txt'
+    data = open('file.txt', 'r')
 
-def save(strk):
-    with open ('file.txt', 'a', encoding = 'utf-8') as data:
-        data.writelines(strk + '\n')
-        data.close()
+    for line in data.readlines():
+        if info in line: print(line)
+    data.close()
 
-# save(input())
-
-def search(strk):
-    data = open('file.txt', 'r', encoding = 'utf-8')
-    strk = strk.split()
-    for i in data:
-        for j in i.split():
-            if j in strk: print(i)
-
+print('Это программа для работы со справочником.\n'
+        'Введите 1 для добавления нового абонента.\n'
+        'Введите 2 для выведения всех абонентов.\n'
+        'Введите 3 для поиска абонента.\n'
+        'Введите 4 для завершения работы программы.')
 x = 0
 while x != 4:
-    x = int(input(':'))
-    if x == 1:
-        see()
-    if x == 2:
-        save(input())
-    if x == 3:
-        search(input())
-    if x == 4:
-        break
+    x = int(input('Введите выбранный вариант: '))
+    if x == 1: add()
+    elif x == 2: output()
+    elif x == 3: search(input('Введите искомую информацию: '))  
+    elif x == 4: break
