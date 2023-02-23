@@ -15,7 +15,7 @@
 
 def add():
     with open('file.txt', 'a') as data:
-        surname = data.write(input('Введите фамилия: '))
+        surname = data.write(input('Введите фамилию: '))
         data.write(' ')
         name = data.write(input('Введите имя: '))
         data.write(' ')
